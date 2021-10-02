@@ -1,0 +1,5 @@
+Sins Avoided:
+    Inputs are validated.
+    Added some policies
+    Passwords are hashed
+    Added CSRF protection
