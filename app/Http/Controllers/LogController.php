@@ -36,8 +36,8 @@ class LogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'Username' => 'required',
-            'password' => 'required'
+            'Username' => [ 'required','string', 'max:255'],
+            'password' => ['required','string','min:8','confirmed'],
         ]);
 
         Student::create($request->all());
@@ -45,6 +45,7 @@ class LogController extends Controller
         return redirect()->route('index')
                          ->with('success', 'Student logged in successfully');
     }
+
 
     /**
      * Display the specified resource.

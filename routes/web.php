@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,12 @@ Route::get('/', function () {
 Route::get('/',[App\Http\Controllers\LogController::class, 'index']);
 Route::post('index',[App\Http\Controllers\LogController::class,'store'])->name('store');
 Route::post('/',[App\Http\Controllers\LogController::class,'index'])->name('index');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/token', function (Request $request) {
+    $token = $request->session()->token();
+
+    $token = csrf_token();
+
+    // ...
+});

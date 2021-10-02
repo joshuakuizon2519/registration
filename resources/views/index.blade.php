@@ -22,8 +22,8 @@
             padding: 15px; 
             border-radius: 9px;
             }
-        .loginform div{
-            font-size: 20px;
+        .form-group h2{
+            font-size: 48px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -71,8 +71,8 @@
 
             </div>
 
-    <form action={{ route('store') }} method="POST">
-    @@csrf  
+    <form action={{route('store')}} method="POST">
+    @csrf  
         <div class="form-group">
             <div class= "col-sm-12">
                 <h2>Registration</h2>
