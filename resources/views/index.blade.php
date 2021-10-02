@@ -54,6 +54,7 @@
             -webkit-appearance: none;
             width: 80px;
             padding: 8px;
+            border-radius: 8px;
                         }
         </style>
     </head>
@@ -71,7 +72,7 @@
 
             </div>
 
-    <form action={{route('store')}} method="POST">
+    <form action="{{route('store')}}" method="POST">
     @csrf  
         <div class="form-group">
             <div class= "col-sm-12">
@@ -84,7 +85,7 @@
 
                 <div class="loginform">
                     <label>Username</label>
-                    <input type = "text" class="field" name = "username" id="Username" placeholder = "Username" required>
+                    <input type = "text" class="field" name = "Username" id="Username" placeholder = "Username" required>
                     <label>Password</label>
                     <input type = "password" class="field" name = "password" id="password" placeholder = "Password" required>
                     <button type = "submit" class="submitlogin" name = "login">Login</button>
